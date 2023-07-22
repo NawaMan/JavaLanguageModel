@@ -36,3 +36,5 @@ replay_pid*
 **/target
 **/pom.xml.versionsBackup
 **/.factorypath
+
+.vscode/settings.json
