@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     
     <parent>
-        <groupId>io.github.nawaman</groupId>
+        <groupId>net.nawaman..javalanguagemodel</groupId>
         <artifactId>javalanguagemodel-base</artifactId>
         <version>0.0.1.2-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
