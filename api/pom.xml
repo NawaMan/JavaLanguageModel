@@ -9,8 +9,8 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
     
-    <artifactId>javalanguagemodel-spec</artifactId>
-    <name>javalanguagemodel-spec</name>
+    <artifactId>javalanguagemodel-api</artifactId>
+    <name>javalanguagemodel-api</name>
     <description>
         The specification for Java Language Model.
     </description>

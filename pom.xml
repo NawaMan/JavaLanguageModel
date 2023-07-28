@@ -79,7 +79,7 @@
     </developers>
     
     <modules>
-        <module>spec</module>
+        <module>api</module>
     </modules>
     
     <dependencyManagement>
