@@ -80,6 +80,7 @@
     
     <modules>
         <module>api</module>
+        <module>reflection</module>
     </modules>
     
     <dependencyManagement>
