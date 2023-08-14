@@ -1,17 +1,10 @@
 package net.nawaman.javalanguagemodel.api;
 
-import net.nawaman.javalanguagemodel.api.declaration.TypeDeclaration;
-import net.nawaman.javalanguagemodel.utils.ReadOnlyList;
-
 /** This is a reference types or Object types. */
-public interface ReferenceType extends Type {
-    Accessibility               accessibility();
-    Modifier                    modifier();
-    String                      simpleName();
-    Package                     typePackage();
-    ReadOnlyList<TypeParameter> parameters();
-    TypeDeclaration             declaration();
+public abstract class ReferenceType extends Type {
     
-    Scope               scope();          // null if first level.
-    Type                enclosingType();  // null if first level.
+    ReferenceType(TypeKind kind) {
+        super(kind);
+    }
+    
 }

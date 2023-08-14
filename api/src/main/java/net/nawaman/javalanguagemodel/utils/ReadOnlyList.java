@@ -18,9 +18,15 @@ import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
 
 import lombok.val;
+import net.nawaman.javalanguagemodel.api.unsure.TypeParameter;
 
 @FunctionalInterface
 public interface ReadOnlyList<DATA> extends List<DATA> {
+    
+    public static ReadOnlyList<TypeParameter> emptyList() {
+        return () -> Stream.empty();
+    }
+    
     
     @Override
     public Stream<DATA> stream();

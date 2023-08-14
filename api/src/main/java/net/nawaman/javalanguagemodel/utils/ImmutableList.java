@@ -1,6 +1,7 @@
 package net.nawaman.javalanguagemodel.utils;
 
 import static java.util.Collections.emptyList;
+import static java.util.stream.Collectors.joining;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -46,6 +47,11 @@ public class ImmutableList<DATA> implements ReadOnlyList<DATA> {
     @Override
     public ListIterator<DATA> listIterator(int index) {
         return new ReadOnlyListIterator<>(list.listIterator(index));
+    }
+    
+    @Override
+    public String toString() {
+        return "[" + stream().map(String::valueOf).collect(joining(", ")) + "]";
     }
     
 }

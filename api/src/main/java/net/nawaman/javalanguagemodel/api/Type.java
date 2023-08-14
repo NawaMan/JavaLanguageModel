@@ -1,36 +1,37 @@
 package net.nawaman.javalanguagemodel.api;
 
-/** Type is for variable, fields, method parameters and return type */
-public interface Type {
+import lombok.NonNull;
+
+/** Type is for variable, fields, method parameters and return type. */
+public abstract class Type {
     
-    /** char primitive type */
-    public static final PrimitiveType CHR = new PrimitiveType("char");
+    public static final PrimitiveType primitiveChar    = new PrimitiveType("char",    Character.class);
+    public static final PrimitiveType primitiveByte    = new PrimitiveType("byte",    Byte.class);
+    public static final PrimitiveType primitiveShort   = new PrimitiveType("short",   Short.class);
+    public static final PrimitiveType primitiveInt     = new PrimitiveType("int",     Integer.class);
+    public static final PrimitiveType primitiveLong    = new PrimitiveType("long",    Long.class);
+    public static final PrimitiveType primitiveFloat   = new PrimitiveType("float",   Float.class);
+    public static final PrimitiveType primitiveDouble  = new PrimitiveType("double",  Double.class);
+    public static final PrimitiveType primitiveBoolean = new PrimitiveType("boolean", Boolean.class);
+    public static final PrimitiveType primitiveVoid    = new PrimitiveType("void",    Void.class);
     
-    /** byte primitive type */
-    public static final PrimitiveType BYT = new PrimitiveType("byte");
+    private final TypeKind kind;
     
-    /** short primitive type */
-    public static final PrimitiveType SHRT = new PrimitiveType("short");
+    Type(@NonNull TypeKind kind) {
+        this.kind = kind;
+    }
     
-    /** int primitive type */
-    public static final PrimitiveType INT = new PrimitiveType("int");
+    /** @return  the simple name of the type which is the name to use when the type is already imported. */
+    public abstract String simpleName();
     
-    /** long primitive type */
-    public static final PrimitiveType LNG = new PrimitiveType("long");
+    /** @return  the full name of the type which is the name to use regardless if the type is imported. */
+    public abstract String fullName();
     
-    /** float primitive type */
-    public static final PrimitiveType FLT = new PrimitiveType("float");
+    /** @return  the raw name of the type but without wildcard (if exists). */
+    public abstract String rawName();
     
-    /** double primitive type */
-    public static final PrimitiveType DBL = new PrimitiveType("double");
-    
-    /** boolean primitive type */
-    public static final PrimitiveType BOOL = new PrimitiveType("boolean");
-    
-    /** void primitive type */
-    public static final PrimitiveType VOID = new PrimitiveType("void");
-    
-    
-    String name();
+    public final TypeKind kind() {
+        return kind;
+    }
     
 }

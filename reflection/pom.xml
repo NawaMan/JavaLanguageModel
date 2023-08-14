@@ -22,9 +22,17 @@
     
     <dependencies>
         <dependency>
+            <groupId>net.nawaman..javalanguagemodel</groupId>
+            <artifactId>javalanguagemodel-api</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
         </dependency>
         
         <dependency>

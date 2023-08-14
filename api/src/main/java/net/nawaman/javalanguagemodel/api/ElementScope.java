@@ -1,6 +1,6 @@
 package net.nawaman.javalanguagemodel.api;
 
-public enum Scope {
+public enum ElementScope {
     Static,
     Instance
 }
